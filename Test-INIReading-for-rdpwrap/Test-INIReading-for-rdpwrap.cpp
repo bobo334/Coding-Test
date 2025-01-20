@@ -38,5 +38,14 @@ int main()
         DWORD bInitialized_x64 = parser.getDWordHex(section2, "bInitialized.x64", 0x0);
         cout << "bInitialized.x64: 0x" << hex << bInitialized_x64 << endl;
 
+        string patchCode = parser.getString("PatchCodes", "CDefPolicy_Query_edx_ecx");
+        cout << "PatchCode: " << patchCode << endl;
+
+        auto Machinehex = parser.hexToMachineCode(patchCode);
+        cout << "MachineCode:";
+        for (uint8_t byte : Machinehex) {
+            cout << hex << setw(2) << setfill('0') << static_cast<int>(byte);
+        }
+        cout << endl;
     return 0;
 }
