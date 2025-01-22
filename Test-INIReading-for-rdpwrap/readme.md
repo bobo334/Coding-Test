@@ -4,7 +4,8 @@
 
 本项目贡献者
 - [bobo](https://github.com/bobo334)
-- 枫以
+- [枫以](https://github.com/ByzhBlithe)
+
 本项目使用了开源解析器
 - [inih](https://github.com/benhoyt/inih)
 
